@@ -2,7 +2,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title></title>
+<title>Organograma — INFO+ Telecom</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -83,9 +83,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   <div class="level-label">Diretoria</div>
   <div class="row">
     <div class="card dir"><div class="cn">André Luis de Araujo</div><div class="cr">Redes Lógicas / Links / Provedores</div></div>
-    <div class="card dir"><div class="cn">Bruno G. Escorsin</div><div class="cr">RH / Adm/Comercial / SAC / Júridico / Frotas</div></div>
+    <div class="card dir"><div class="cn">Bruno G. Escorsin</div><div class="cr">RH / Comercial / SAC / Frotas</div></div>
     <div class="card dir"><div class="cn">Orlando R. de Oliveira Jr.</div><div class="cr">Técnicos / NOC / Servidores</div></div>
-    <div class="card dir"><div class="cn">Felipe Marques Scarelli</div><div class="cr">Financeiro / Estoque / Adm/Comercial</div></div>
+    <div class="card dir"><div class="cn">Felipe Marques Scarelli</div><div class="cr">Financeiro / Comercial</div></div>
   </div>
   <div class="connector"><div class="vline"></div><div class="hline"></div><div class="vline"></div></div>
   <div class="level-label">Gerência Geral</div>
@@ -104,12 +104,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <div class="direct-card"><div class="cn">Marco Antonio do Amaral</div><div class="cr">Agendamento</div></div>
   </div>
 </div>
-<div class="footer">
-  INFO+ Telecom · Organograma gerado em March/2026<br>
-  <em style="font-size: 12px; margin-top: 8px; display: block;">
-    Organograma desenvolvido e dedicado a Júnior César de Faria
-  </em>
-</div>
+<div class="footer">INFO+ Telecom · Organograma gerado em March/2026</div>
 <script>
 const sups=[
   {id:'gabriel',name:'Gabriel Camargo da Luz',role:'Sup. Técnicos FTTH / NOC',co:'co-resp.: Orlando',count:14,groups:[
@@ -140,7 +135,7 @@ const sups=[
       {n:'Fabio Yojiro Tashima',r:'Técnico Remoto SAC',c:'Carlópolis'},
     ]},
     {t:'Atendentes de Loja',m:[
-      {n:'Maria Laura P. Palma',r:'Atendente Loja',c:'Fartura'},
+      {n:'Nayara Marcela Nery Fabro',r:'Atendente Loja',c:'Fartura'},
       {n:'Poliana G. R. de Azevedo',r:'Atendente Loja',c:'Arapoti'},
       {n:'Gabriela Piovesam Bomfim',r:'Atendente Loja',c:'Taguaí'},
       {n:'Ana Luisa Oliveira Santos',r:'Atendente Loja',c:'Carlópolis'},
@@ -148,12 +143,11 @@ const sups=[
     ]},
   ]},
   {id:'natalia',name:'Natália C. dos Santos',role:'Sup. RH e Financeiro',co:'co-resp.: Bruno / Felipe',count:1,groups:[
-    {t:'Equipe',m:[{n:'Pâmela Conick Ramos',r:'Aux. Cobrança / RH / Financeiro',c:'Carlópolis'}]},
+    {t:'Equipe',m:[{n:'Heloísa Gracioli',r:'Aux. RH / Financeiro / Comercial',c:'Carlópolis'}]},
   ]},
-  {id:'daiane',name:'Daiane Garcia de Oliveira',role:'Sup. Cobrança',co:'co-resp.: Bruno / Felipe',count:2,groups:[
+  {id:'daiane',name:'Marcos Henrique Bueno de Lima',role:'Sup. Cobrança',co:'co-resp.: Bruno / Felipe',count:1,groups:[
     {t:'Equipe',m:[
-      {n:'Helen Tawana Deus Oliveira',r:'Aux. de Cobrança',c:'Carlópolis'},
-      {n:'Pâmela Conick Ramos',r:'Aux. Cobrança / RH / Financeiro',c:'Carlópolis'},
+      {n:'Pâmela Conick Ramos',r:'Aux. de Cobrança',c:'Carlópolis'},
     ]},
   ]},
   {id:'douglas',name:'Douglas S. Sdrubolini',role:'Sup. de Estoque',co:'co-resp.: Felipe',count:1,groups:[
