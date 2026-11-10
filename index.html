@@ -201,10 +201,10 @@ const sups=[
       {n:'Ana Claudia da Silva',r:'Atendente Loja',c:'Joaquim Távora'},
     ]},
   ]},
-  {id:'natalia',name:'Natália C. dos Santos',role:'Sup. RH e Financeiro',co:'co-resp.: Bruno / Felipe',count:1,groups:[
+  {id:'natalia',name:'Natália C. dos Santos',role:'Sup. RH e Contas a Pagar',co:'co-resp.: Bruno / Felipe',count:1,groups:[
     {t:'Equipe',m:[{n:'Heloísa Gracioli',r:'Aux. RH / Financeiro / Comercial',c:'Carlópolis'}]},
   ]},
-  {id:'daiane',name:'Marcos Henrique Bueno de Lima',role:'Sup. Cobrança',co:'co-resp.: Bruno / Felipe',count:1,groups:[
+  {id:'daiane',name:'Marcos Henrique Bueno de Lima',role:'Sup. Contas a Receber',co:'co-resp.: Bruno / Felipe',count:1,groups:[
     {t:'Equipe',m:[
       {n:'Pâmela Conick Ramos',r:'Aux. de Cobrança',c:'Carlópolis'},
     ]},
@@ -236,6 +236,7 @@ function toggle(s){
   const vagas=s.groups.reduce((a,g)=>a+g.m.filter(m=>m.v).length,0);
   let html='<div class="panel"><div class="panel-head"><span class="ph">Equipe de '+s.name+'</span><span class="pc">'+total+' colaborador'+(total!==1?'es':'')+(vagas?' · '+vagas+' vaga'+(vagas!==1?'s':'')+' em aberto':'')+'</span></div><div class="panel-body">';
   if(s.id==='luidialan'){html+='<div class="functional-hint">Luidialan: gestão operacional, qualidade do atendimento online/presencial e organização das lojas. Assuntos comerciais das atendentes (vendas e eventos) e vendas feitas pelos técnicos remotos fora do horário comercial: Luciana.</div>';}
+  if(s.id==='daiane'){html+='<div class="functional-hint"><strong>Responsabilidades de Contas a Receber:</strong> cobrança, inadimplência, cancelamentos e gestão de recebíveis.</div>';}
   if(total===0){html+='<span style="font-size:12px;color:var(--text3);font-style:italic">Sem equipe direta cadastrada</span>';}
   s.groups.forEach(g=>{
     html+='<div class="group-title">'+g.t+'</div>';
