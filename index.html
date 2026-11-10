@@ -127,7 +127,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   <hr class="sep">
   <div class="level-label">Reportam diretamente a Júnior e Bruno</div>
   <div class="direct-row">
-    <div class="direct-card"><div class="cn">Luciana Brenda Garcia</div><div class="cr">Supervisor de Vendas</div><div class="functional-inline">Referência comercial das atendentes (vendas e eventos) e dos técnicos remotos SAC nas vendas fora do horário comercial</div></div>
+    <div class="direct-card"><div class="cn">Luciana Brenda Garcia</div><div class="cr">Supervisora Comercial</div><div class="functional-inline">Referência comercial das atendentes (vendas e eventos) e dos técnicos remotos SAC nas vendas fora do horário comercial</div></div>
     <div class="direct-card"><div class="cn">Welington Luiz Ferreira</div><div class="cr">Frotas e Auxiliar Geral</div></div>
     <div class="direct-card"><div class="cn">Marco Antonio do Amaral</div><div class="cr">Agendamento</div></div>
   </div>
