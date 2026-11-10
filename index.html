@@ -87,13 +87,15 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .functional-lead .details{font-size:11px;color:var(--text2);line-height:1.6;margin-top:7px}
 .functional-arrow{text-align:center;color:var(--text3);font-size:12px;margin:9px 0 7px}
 .functional-team{max-width:440px;margin:0 auto;background:var(--blue50);border:1px solid var(--border);border-radius:9px;text-align:center;padding:11px 14px}
+.functional-teams{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:760px;margin:0 auto}
+.functional-teams .functional-team{width:100%;max-width:none}
 .functional-team .team-name{font-size:13px;color:var(--blue800);font-weight:600}
 .functional-team .team-detail{font-size:11px;color:var(--text2);margin-top:4px}
 .functional-explainer{text-align:center;color:var(--text3);font-size:10px;line-height:1.5;margin-top:10px}
 .functional-inline{color:var(--text3);font-size:10px;line-height:1.45;margin-top:6px;max-width:230px}
 .functional-hint{font-size:11px;line-height:1.5;color:var(--text2);padding:9px 12px;background:var(--teal50);border-radius:7px;margin-bottom:10px}
 .shared-mini{padding:7px 10px;border-left:3px solid var(--purple600);background:var(--purple50);color:var(--purple800);border-radius:0 7px 7px 0;font-size:11px;line-height:1.5;margin:2px 0 9px}
-@media(max-width:620px){.functional-columns{grid-template-columns:1fr}.functional-map{padding:15px}.functional-inline{max-width:none}}
+@media(max-width:620px){.functional-columns,.functional-teams{grid-template-columns:1fr}.functional-map{padding:15px}.functional-inline{max-width:none}}
 </style>
 </head>
 <body>
@@ -125,13 +127,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   <hr class="sep">
   <div class="level-label">Reportam diretamente a Júnior e Bruno</div>
   <div class="direct-row">
-    <div class="direct-card"><div class="cn">Luciana Brenda Garcia</div><div class="cr">Supervisor de Vendas</div><div class="functional-inline">Referência comercial das atendentes: vendas e eventos</div></div>
+    <div class="direct-card"><div class="cn">Luciana Brenda Garcia</div><div class="cr">Supervisor de Vendas</div><div class="functional-inline">Referência comercial das atendentes (vendas e eventos) e dos técnicos remotos SAC nas vendas fora do horário comercial</div></div>
     <div class="direct-card"><div class="cn">Welington Luiz Ferreira</div><div class="cr">Frotas e Auxiliar Geral</div></div>
     <div class="direct-card"><div class="cn">Marco Antonio do Amaral</div><div class="cr">Agendamento</div></div>
   </div>
-  <section class="functional-map" aria-label="Responsabilidades compartilhadas das atendentes de loja">
+  <section class="functional-map" aria-label="Responsabilidades compartilhadas das atendentes de loja e dos técnicos remotos do SAC">
     <h2>Atendimento e Comercial: responsabilidades compartilhadas</h2>
-    <p class="functional-intro">As atendentes das lojas se reportam a responsáveis diferentes conforme o assunto.</p>
+    <p class="functional-intro">Atendentes de loja e técnicos remotos SAC têm referências distintas para a operação de atendimento e as atividades comerciais.</p>
     <div class="functional-columns">
       <div class="functional-lead">
         <div class="label">Gestão operacional e qualidade</div>
@@ -141,15 +143,21 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <div class="functional-lead sales">
         <div class="label">Gestão comercial</div>
         <div class="person">Luciana Brenda Garcia</div>
-        <div class="details">Vendas, ações comerciais e eventos. Todas as atendentes se reportam à Luciana quanto aos assuntos comerciais.</div>
+        <div class="details">Vendas, ações comerciais e eventos. Todas as atendentes se reportam à Luciana nas atividades comerciais. Os técnicos remotos SAC também se reportam a ela nas vendas realizadas fora do horário comercial.</div>
       </div>
     </div>
     <div class="functional-arrow">↓ &nbsp; Dupla referência por assunto &nbsp; ↓</div>
-    <div class="functional-team">
-      <div class="team-name">Atendentes das cinco lojas</div>
-      <div class="team-detail">Uma única equipe · duas responsabilidades funcionais</div>
+    <div class="functional-teams">
+      <div class="functional-team">
+        <div class="team-name">Atendentes das cinco lojas</div>
+        <div class="team-detail">Luidialan: atendimento, lojas e pontualidade · Luciana: vendas e eventos</div>
+      </div>
+      <div class="functional-team">
+        <div class="team-name">Técnicos remotos do SAC</div>
+        <div class="team-detail">Luidialan: atendimento e operação · Luciana: vendas fora do horário comercial</div>
+      </div>
     </div>
-    <p class="functional-explainer">A equipe permanece cadastrada sob SAC/Atendimento. A atribuição comercial é transversal e não representa colaboradores adicionais.</p>
+    <p class="functional-explainer">As duas equipes permanecem cadastradas no SAC. A referência comercial da Luciana é funcional e não altera a supervisão direta nem a contagem de colaboradores.</p>
   </section>
 </div>
 <div class="footer">INFO+ Telecom · Organograma atualizado em 10/11/2026</div>
@@ -227,11 +235,12 @@ function toggle(s){
   const total=s.groups.reduce((a,g)=>a+g.m.filter(m=>!m.v).length,0);
   const vagas=s.groups.reduce((a,g)=>a+g.m.filter(m=>m.v).length,0);
   let html='<div class="panel"><div class="panel-head"><span class="ph">Equipe de '+s.name+'</span><span class="pc">'+total+' colaborador'+(total!==1?'es':'')+(vagas?' · '+vagas+' vaga'+(vagas!==1?'s':'')+' em aberto':'')+'</span></div><div class="panel-body">';
-  if(s.id==='luidialan'){html+='<div class="functional-hint">Luidialan: gestão operacional, qualidade do atendimento online/presencial e organização das lojas. Assuntos comerciais das atendentes (vendas e eventos): Luciana.</div>';}
+  if(s.id==='luidialan'){html+='<div class="functional-hint">Luidialan: gestão operacional, qualidade do atendimento online/presencial e organização das lojas. Assuntos comerciais das atendentes (vendas e eventos) e vendas feitas pelos técnicos remotos fora do horário comercial: Luciana.</div>';}
   if(total===0){html+='<span style="font-size:12px;color:var(--text3);font-style:italic">Sem equipe direta cadastrada</span>';}
   s.groups.forEach(g=>{
     html+='<div class="group-title">'+g.t+'</div>';
     if(s.id==='luidialan' && g.t==='Atendentes de Loja'){html+='<div class="shared-mini"><strong>Assuntos de atendimento, lojas e pontualidade:</strong> Luidialan &nbsp; · &nbsp; <strong>Vendas e eventos:</strong> Luciana</div>';}
+    if(s.id==='luidialan' && g.t==='Técnicos Remotos SAC'){html+='<div class="shared-mini"><strong>Atendimento e operação:</strong> Luidialan &nbsp; · &nbsp; <strong>Vendas fora do horário comercial:</strong> Luciana</div>';}
     html+='<div class="members">';
     g.m.forEach(m=>{html+='<div class="member'+(m.v?' vacancy':'')+'"><div class="mn">'+m.n+'</div><div class="mr">'+m.r+'</div>'+(m.c?'<div class="mc">'+m.c+'</div>':'')+'</div>';});
     html+='</div>';
